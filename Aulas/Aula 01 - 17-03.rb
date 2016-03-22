@@ -62,3 +62,7 @@ Criando o primeiro scaffold:
 
 	$ rails g scaffold Person name:string email:string password:string born_at:date admin:boolean
 
+Após isso, é necessário criar as tabelas no banco:
+	
+	$ rake db:migrate
+
