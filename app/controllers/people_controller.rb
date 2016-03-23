@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_action :set_person, only: [:show, :edit, :update, :destroy]
+  before_action :set_person, only: [:show, :edit, :update, :destroy] 
 
   # GET /people
   # GET /people.json
@@ -24,14 +24,14 @@ class PeopleController < ApplicationController
   # POST /people
   # POST /people.json
   def create
-    @person = Person.new(person_params)
+    @person = Person.new(person_params) # existe o método person_params que indica quais parametros são
 
-    respond_to do |format|
-      if @person.save
-        format.html { redirect_to @person, notice: 'Person was successfully created.' }
-        format.json { render :show, status: :created, location: @person }
+    respond_to do |format| # de acordo com o formato, ele tem uma ação diferente
+      if @person.save # se eu conseguir salvar
+        format.html { redirect_to @person, notice: 'Person was successfully created.' } # se for html faz isso
+        format.json { render :show, status: :created, location: @person } # se for json faz isso
       else
-        format.html { render :new }
+        format.html { render :new } # se nao for salvo, renderiza o new.
         format.json { render json: @person.errors, status: :unprocessable_entity }
       end
     end
@@ -39,7 +39,7 @@ class PeopleController < ApplicationController
 
   # PATCH/PUT /people/1
   # PATCH/PUT /people/1.json
-  def update
+  def update # é igual a action create
     respond_to do |format|
       if @person.update(person_params)
         format.html { redirect_to @person, notice: 'Person was successfully updated.' }
@@ -68,7 +68,7 @@ class PeopleController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def person_params
+    def person_params # Filtra somente os atributos que eu quero, medida de segurança, exemplo do 'mester'
       params.require(:person).permit(:name, :email, :password, :born_at, :admin)
     end
 end

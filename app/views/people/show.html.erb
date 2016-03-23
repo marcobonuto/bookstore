@@ -22,7 +22,7 @@
 
 <p>
   <strong>Admin:</strong>
-  <%= @person.admin %>
+  <%= @person.admin ? "sim" : "Não" %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

@@ -66,3 +66,23 @@ Após isso, é necessário criar as tabelas no banco:
 	
 	$ rake db:migrate
 
+	O migrate adpita o banco de dados de acordo com o estado que eu preciso, de acordo com a data (nome do arquivo)
+
+	rollback eu volto para traz (posso usar para deletar a ultima migration que eu fiz)
+
+	Outros métodos: 
+
+	• add_column
+  • add_index
+	• add_timestamp
+	• create_table
+	• remove_timestamps
+	• rename_column
+	• rename_index
+	• rename_table
+
+Comandos:
+
+- rails console 
+
+- rails dbconsole

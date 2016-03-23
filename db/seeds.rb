@@ -9,3 +9,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+		
+		marco = Person.find_or_create_by(name: "marco",
+																		email: "marcobonuto@yahoo.com",
+																		password: 123456,
+																		born_at: "2016-01-01",
+																		admin: false)
+
+		# no terminal, rodar: rake db:seed

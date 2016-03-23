@@ -1,4 +1,5 @@
 <%= form_for(@person) do |f| %>
+  <!-- Bloco que exibe os error !-->
   <% if @person.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -11,6 +12,7 @@
     </div>
   <% end %>
 
+  <!-- Fim Bloco que exibe os error !-->
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -21,11 +23,11 @@
   </div>
   <div class="field">
     <%= f.label :password %><br>
-    <%= f.text_field :password %>
+    <%= f.password_field :password %> <!-- helper de formulario que esconde a senha -->
   </div>
   <div class="field">
     <%= f.label :born_at %><br>
-    <%= f.date_select :born_at %>
+    <%= f.date_select :born_at, start_year: Date.current.year - 80 %> <!-- helper date_select mostra ano/mes/dia -->
   </div>
   <div class="field">
     <%= f.label :admin %><br>

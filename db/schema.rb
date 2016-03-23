@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20160322231631) do
 
   create_table "people", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password"
+    t.string   "name",       limit: 100, null: false
+    t.string   "email",      limit: 100, null: false
+    t.string   "password",               null: false
     t.date     "born_at"
     t.boolean  "admin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

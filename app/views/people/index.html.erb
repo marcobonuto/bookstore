@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p> <!-- notice é um helper que verifica se existe uma mensagem de notificação, por exemplo: "pessoa criada" -->
 
 <h1>Listing People</h1>
 
@@ -7,7 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Password</th>
+      <!--<th>Password</th>-->
       <th>Born at</th>
       <th>Admin</th>
       <th colspan="3"></th>
@@ -15,16 +15,17 @@
   </thead>
 
   <tbody>
-    <% @people.each do |person| %>
+    <% @people.each do |person| %> <%# pra cada (each) pessoa que eu encontrei, execute o bloco abaixo %>
       <tr>
         <td><%= person.name %></td>
         <td><%= person.email %></td>
-        <td><%= person.password %></td>
+        <!--<td><%= person.password %></td>-->
         <td><%= person.born_at %></td>
-        <td><%= person.admin %></td>
+        <td><%= person.admin ? "Sim" : "Não" %></td> <!-- operador ternario, se for sim, imprime "sim" -->
         <td><%= link_to 'Show', person %></td>
         <td><%= link_to 'Edit', edit_person_path(person) %></td>
         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- O data acima vem do html date attributes, usar o inspect e ver como ele gerou esse 'destroy' -->
       </tr>
     <% end %>
   </tbody>
