@@ -67,8 +67,12 @@ Após isso, é necessário criar as tabelas no banco:
 	$ rake db:migrate
 
 	O migrate adpita o banco de dados de acordo com o estado que eu preciso, de acordo com a data (nome do arquivo)
+	
+	Adicionando uma coluna nova:
 
-	rollback eu volto para traz (posso usar para deletar a ultima migration que eu fiz)
+	$ rails g migration AddPointsToPerson points:number
+
+	-> rollback eu volto para traz (posso usar para deletar a ultima migration que eu fiz)
 
 	Outros métodos: 
 

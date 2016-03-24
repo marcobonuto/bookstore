@@ -5,3 +5,6 @@ class PersonTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+
+# assert -> tenha certeza
+

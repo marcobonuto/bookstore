@@ -30,6 +30,7 @@ class PeopleController < ApplicationController
       if @person.save # se eu conseguir salvar
         format.html { redirect_to @person, notice: 'Person was successfully created.' } # se for html faz isso
         format.json { render :show, status: :created, location: @person } # se for json faz isso
+
       else
         format.html { render :new } # se nao for salvo, renderiza o new.
         format.json { render json: @person.errors, status: :unprocessable_entity }
@@ -69,6 +70,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params # Filtra somente os atributos que eu quero, medida de segurança, exemplo do 'mester'
-      params.require(:person).permit(:name, :email, :password, :born_at, :admin)
+      params.require(:person).permit(:name, :email, :password, :born_at, :admin) # sql injection
     end
 end

@@ -6,6 +6,7 @@ one:
   password: MyString
   born_at: 2016-03-22
   admin: false
+  points: 0
 
 two:
   name: MyString
@@ -13,3 +14,4 @@ two:
   password: MyString
   born_at: 2016-03-22
   admin: false
+  points: 10
