@@ -72,4 +72,5 @@ class PeopleController < ApplicationController
     def person_params # Filtra somente os atributos que eu quero, medida de segurança, exemplo do 'mester'
       params.require(:person).permit(:name, :email, :password, :born_at, :admin) # sql injection
     end
+
 end

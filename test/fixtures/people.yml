@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  password: MyString
-  born_at: 2016-03-22
-  admin: false
+admin:
+  name: Marco Bonuto
+  email: marco@cammino.com.br
+  password: secret
+  born_at: 1987-10-30
+  admin: true
   points: 0
 
-two:
-  name: MyString
-  email: MyString
-  password: MyString
-  born_at: 2016-03-22
+autor:
+  name: Bruna Pagani
+  email: brunapagani@bol.com.br
+  password: secretagain
+  born_at: 1994-06-09
   admin: false
   points: 10
