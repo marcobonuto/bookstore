@@ -6,6 +6,13 @@ class Person < ActiveRecord::Base
 
 	validate :age_limit
 
+
+	# scope newbie, ->(days = 1) { where([" created_at >= ?", Time.current - days.days])}
+
+	def self.auth(email, password)
+		where(["email=? and password=?", email, encrypt_password(password)]).first
+	end
+
 	private
 
 	def age_limit # método para validar a idade

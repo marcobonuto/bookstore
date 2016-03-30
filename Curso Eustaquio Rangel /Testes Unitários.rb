@@ -15,6 +15,10 @@ Temos o método setup, que é o “construtor” do teste, e vai ser chamado par
 			@calculadora = Calculadora.new
 		end
 
+Rodando os testes:
+
+	$ rake test:units
+
 
 Modernizando os testes
 
